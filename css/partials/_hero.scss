@@ -1,0 +1,204 @@
+.hero{
+    position: relative;
+
+    margin-bottom: 9rem;
+    // padding: 4.75rem 0 10.25rem;
+    padding: 2.75rem 0 12.25rem;
+    background: url('../../images/hero__bg.png')no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    &__row{
+        gap: 2rem;
+        flex-direction: column-reverse;
+    }
+
+    &__col{
+        position: relative;
+
+        .recovery-rates{
+            position: absolute;
+            top: -45px;
+            right: 0;
+
+            max-width: 90px;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        &__img{
+            max-width: 34.25rem;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        &__content{
+            font-family: $font-opensans;
+
+            &-review{
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+
+                font-size: 13px;
+                font-weight: 700;
+                color: $content-color;
+
+                span{
+                    display: flex;
+                    align-items: center;
+                    gap: .25rem;
+                    
+                    line-height: 1;
+                }
+            }
+
+            > *{
+                margin-bottom: 1.5rem;
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+
+            .download-btns-wrapper{
+                margin-top: 2.25rem;
+            }
+
+            .highlighted__content{
+                color: $secondary;
+                text-transform: uppercase;
+                line-height: 1;
+                font-size: 18px;
+                font-weight: 700;
+
+            }
+        }
+    }
+
+    &__review-col{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        width: calc(100% - 1.5rem);
+        // max-width: 68.125rem;
+        max-width: 32.25rem;
+        background-color: $white;
+
+        border: 1px solid #c5d8f3;
+        border-radius: 1.125rem;
+        padding: 1rem 2.25rem;
+
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+
+        box-shadow: 0px 0px 40px 28px rgba(0,0,0, .07);
+
+        color: $content-color;
+        text-align: center;
+
+        &__img{
+            max-width: 4.75rem;
+            width: 100%;
+        }
+
+        &__content{
+            font-size: 14px;
+
+            p{
+                margin-bottom: 0;
+            }
+
+            h5{
+                color: $black;
+                font-family: $font-opensans;
+                font-size: 14px;
+                font-weight: 700;
+
+                margin-bottom: 12px;
+            }
+
+            img{
+                margin-top: 12px;
+                max-width: 4rem;
+                width: 100%;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md){
+        margin-bottom: 4rem;
+
+        &__col{
+            .recovery-rates{
+                top: -45px;
+                right: 20px;
+
+                max-width: 120px;
+            }
+        }
+
+        &__review-col{
+            flex-direction: row;
+
+            max-width: 43.5rem;
+
+            text-align: left;
+    
+            &__content{
+    
+                img{
+                    margin-top: 12px;
+                    max-width: 4rem;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg){
+        margin-bottom: 3.5rem;
+        padding: 4.75rem 0 10.25rem;
+        &__row{
+            gap: 0;
+            flex-direction: row;
+        }
+
+        &__review-col{
+            max-width: 58.5rem;
+
+            transform: translate(-50%, 40%);
+        }
+
+        &__col{
+            .recovery-rates{
+                top: -55px;
+                right: -40px;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl){
+        margin-bottom: 2.3rem;
+        padding: 4.75rem 0 10.25rem;
+
+        &__review-col{
+            max-width: 68.125rem;
+
+            transform: translate(-50%, 30%);
+        }
+
+        &__col{
+            .recovery-rates{
+                max-width: 160px;
+
+                right: -60px;
+            }
+        }
+    }
+}
